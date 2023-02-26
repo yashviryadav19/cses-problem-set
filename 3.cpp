@@ -1,0 +1,75 @@
+#include<bits/stdc++.h>
+
+#include<ext/pb_ds/assoc_container.hpp>
+#include<ext/pb_ds/tree_policy.hpp>
+
+using namespace std;
+using namespace __gnu_pbds;
+
+#define fastio() ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL)
+#define MOD 1000000007
+#define MOD1 998244353
+#define INF 1e18
+#define el "\n"
+#define vll vector<long long> 
+#define vi vector<int>
+#define vpi vector<pair<int,int>>
+#define vpl vector<pair<ll,ll>>
+#define lb lower_bound
+#define ub upper_bound
+#define vs vector<string> 
+#define pb push_back
+#define ff first
+#define ss second
+#define set_bits __builtin_popcountll
+#define sz(x) ((int)(x).size())
+#define all(x) (x).begin(), (x).end()
+
+typedef long long ll;
+typedef unsigned long long ull;
+typedef long double lld;
+typedef tree<int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node_update > pbds; // find_by_order, order_of_key
+
+#ifndef ONLINE_JUDGE
+#define dbg(x) cerr << #x <<" "; _print(x); cerr << endl;
+#else
+#define dbg(x)
+#endif
+
+void _print(ll t) {cerr << t;}
+void _print(int t) {cerr << t;}
+void _print(string t) {cerr << t;}
+void _print(char t) {cerr << t;}
+void _print(lld t) {cerr << t;}
+void _print(double t) {cerr << t;}
+void _print(ull t) {cerr << t;}
+
+template <class T, class V> void _print(pair <T, V> p);
+template <class T> void _print(vector <T> v);
+template <class T> void _print(set <T> v);
+template <class T, class V> void _print(map <T, V> v);
+template <class T> void _print(multiset <T> v);
+template <class T, class V> void _print(pair <T, V> p) {cerr << "{"; _print(p.ff); cerr << ","; _print(p.ss); cerr << "}";}
+template <class T> void _print(vector <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T> void _print(set <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_print(i); cerr << " ";} cerr << "]";}
+template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
+//********************************************************************//
+
+int main() {
+#ifndef ONLINE_JUDGE
+	freopen("Error.txt", "w", stderr);
+	freopen("input.txt","r",stdin);
+	freopen("output.txt","w",stdout);
+#endif
+	int n;cin>>n;
+	for(ll i=1;i<=n;i++){
+		if(i==1){
+			cout<<0<<el;continue;
+		}
+		ll total=((i*i)*((i*i)-1))/2;
+		ll fight=(i-1)*(i-2)*4;
+		cout<<total-fight<<el;
+	}
+	// cout<<(1<<3);
+}
